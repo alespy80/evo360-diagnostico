@@ -376,6 +376,281 @@ perfil+"<br><br>"+
 </script>
 
 </body>
+</html>transition:all 0.3s ease;
+}
+
+button:hover{
+transform:scale(1.04);
+box-shadow:0 0 15px rgba(0,229,255,0.6);
+}
+
+/* RESULTADO */
+
+.resultado{
+display:none;
+margin-top:25px;
+padding:25px;
+border-radius:20px;
+background:#001d3d;
+}
+
+/* BLOCO NECESSIDADE */
+
+.necessidade{
+max-width:600px;
+margin:40px auto;
+padding:30px;
+background:#0f172a;
+border-radius:20px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,255,150,0.15);
+}
+
+.necessidade h3{
+color:#00ff99;
+margin-bottom:15px;
+}
+
+/* PLANOS */
+
+.plans{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:40px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:15px;
+width:280px;
+box-shadow:0 0 25px rgba(0,255,150,0.15);
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card h2{
+color:#00ff99;
+text-align:center;
+}
+
+.card p{
+font-size:14px;
+color:#ccc;
+}
+
+.price{
+text-align:center;
+margin:15px 0;
+font-size:22px;
+font-weight:bold;
+color:#00e5ff;
+}
+
+.plan-btn{
+display:block;
+text-align:center;
+padding:12px;
+background:#00ff99;
+color:black;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.plan-btn:hover{
+background:#00cc77;
+}
+
+.highlight{
+border:2px solid #00ff99;
+transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#diagnostico">Diagnóstico</a>
+<a href="#planos">Planos</a>
+</nav>
+
+<header id="inicio">
+<h1>EVO 360</h1>
+<p>Método Estratégico de Evolução Corporal</p>
+</header>
+
+<section id="diagnostico">
+
+<h2 style="text-align:center;color:#00e5ff;">Diagnóstico Corporal</h2>
+
+<div class="box">
+
+<input type="number" id="peso" placeholder="Peso (kg)">
+<input type="number" id="altura" placeholder="Altura (cm)">
+
+<select id="objetivo">
+<option value="">Objetivo principal</option>
+<option>Redução de gordura</option>
+<option>Hipertrofia muscular</option>
+<option>Recomposição corporal</option>
+<option>Performance esportiva</option>
+</select>
+
+<button onclick="calcular()">Gerar Diagnóstico</button>
+
+<div id="resultado" class="resultado"></div>
+
+</div>
+
+<div class="necessidade">
+
+<h3>Diagnóstico é só o começo.</h3>
+
+<p>
+Saber seu IMC e objetivo é o primeiro passo.
+O que realmente gera transformação é estratégia, ajuste técnico e acompanhamento direcionado.
+</p>
+
+<p style="margin-top:15px;color:#00e5ff;font-weight:bold;">
+Você vai evoluir sozinho… ou com método?
+</p>
+
+</div>
+
+</section>
+
+<section id="planos">
+
+<h2 style="text-align:center;color:#00ff99;">Planos Personalizados</h2>
+
+<div class="plans">
+
+<div class="card">
+<h2> Presencial 2x por semana</h2>
+
+<p>✔ Dois treinos presenciais por semana</p>
+<p>✔ Planejamento individualizado</p>
+<p>✔ Correção de execução</p>
+<p>✔ Ajustes estratégicos</p>
+
+<div class="price">R$ 350 / mês</div>
+
+<a class="plan-btn"
+href="https://wa.me/5521979259432?text=Olá Alessandro, quero saber mais sobre o plano 2x por semana.">
+Quero esse plano
+</a>
+
+</div>
+
+
+<div class="card">
+<h2>Presencial 3x por semana</h2>
+
+<p>✔ Melhor divisão muscular</p>
+<p>✔ Progressão de carga estratégica</p>
+<p>✔ Evolução técnica constante</p>
+<p>✔ Acompanhamento mais próximo</p>
+
+<div class="price">R$ 480 / mês</div>
+
+<a class="plan-btn"
+href="https://wa.me/5521979259432?text=Olá Alessandro, quero saber mais sobre o plano 3x por semana.">
+Quero esse plano
+</a>
+
+</div>
+
+
+<div class="card highlight">
+
+<h2>presencial 5x por semana 🔥</h2>
+
+<p>✔ Estratégia completa semanal</p>
+<p>✔ Acompanhamento constante</p>
+<p>✔ Foco total em desempenho</p>
+<p>✔ Resultados acelerados</p>
+
+<div class="price">R$ 600 / mês</div>
+
+<a class="plan-btn"
+href="https://wa.me/5521979259432?text=Olá Alessandro, quero transformar meu corpo com o plano 5x por semana.">
+Quero transformar
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h2>Consultoria Online 💻</h2>
+
+<p>✔ Avaliação inicial completa</p>
+<p>✔ Treino personalizado</p>
+<p>✔ Orientação alimentar estratégica</p>
+<p>✔ Suporte direto</p>
+
+<div class="price">R$ 180 / mês</div>
+
+<a class="plan-btn"
+href="https://wa.me/5521979259432?text=Olá Alessandro, quero começar a consultoria online.">
+Começar online
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function calcular(){
+
+let peso=parseFloat(document.getElementById("peso").value);
+let altura=parseFloat(document.getElementById("altura").value)/100;
+let objetivo=document.getElementById("objetivo").value;
+
+if(!peso || !altura || !objetivo){
+alert("Preencha todos os dados.");
+return;
+}
+
+let imc=peso/(altura*altura);
+let perfil="";
+
+if(imc<18.5) perfil="Abaixo do peso – Estratégia de estruturação.";
+else if(imc<24.9) perfil="Peso adequado – Potencial de otimização.";
+else if(imc<29.9) perfil="Sobrepeso – Ajustes estratégicos necessários.";
+else perfil="Obesidade – Alta necessidade de estruturação.";
+
+document.getElementById("resultado").style.display="block";
+
+document.getElementById("resultado").innerHTML=
+
+"<strong>IMC:</strong> "+imc.toFixed(2)+"<br><br>"+
+
+perfil+"<br><br>"+
+
+"Com foco em <strong>"+objetivo+"</strong>, o Método EVO 360 pode acelerar sua evolução.";
+
+}
+
+</script>
+
+</body>
 </html>    color:#00ffcc;
 }
 
