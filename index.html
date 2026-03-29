@@ -1,395 +1,248 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>EVO 360 | Método Estratégico</title>
-
-<style>
-
-body{
-margin:0;
-font-family:'Segoe UI', sans-serif;
-background:#0a0f1c;
-color:white;
-scroll-behavior:smooth;
-}
-
-/* MENU */
-
-nav{
-position:fixed;
-width:100%;
-background:rgba(0,0,0,0.85);
-padding:18px;
-text-align:center;
-z-index:1000;
-backdrop-filter: blur(6px);
-}
-
-nav a{
-color:#00e5ff;
-text-decoration:none;
-margin:0 18px;
-font-weight:bold;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#00ffcc;
-}
-
-/* HEADER */
-
-header{
-padding:140px 20px 70px 20px;
-text-align:center;
-background:linear-gradient(135deg,#000814,#001d3d,#003566);
-}
-
-/* LOGO */
-
-.logo{
-width:220px;
-height:200px;
-border-radius:50%;
-object-fit:cover;
-transform:scale(1.45);
-filter:drop-shadow(0 0 10px #00e5ff);
-}
-
-header h1{
-font-size:38px;
-letter-spacing:3px;
-color:#00e5ff;
-}
-
-header p{
-color:#cbd5e1;
-}
-
-/* SEÇÕES */
-
-section{
-padding:70px 20px;
-}
-
-/* BOX DIAGNÓSTICO */
-
-.box{
-background:#111827;
-padding:30px;
-border-radius:20px;
-max-width:520px;
-margin:30px auto;
-box-shadow:0 20px 50px rgba(0,180,255,0.2);
-}
-
-input, select{
-width:100%;
-padding:15px;
-margin:12px 0;
-border-radius:12px;
-border:1px solid #1e293b;
-background:#0f172a;
-color:white;
-}
-
-input:focus, select:focus{
-outline:none;
-border-color:#00e5ff;
-}
-
-/* BOTÃO */
-
-button{
-width:100%;
-padding:15px;
-border:none;
-border-radius:12px;
-background:linear-gradient(90deg,#0077ff,#00e5ff);
-color:white;
-font-weight:bold;
-cursor:pointer;
-margin-top:15px;
-transition:all 0.3s ease;
-}
-
-button:hover{
-transform:scale(1.04);
-box-shadow:0 0 15px rgba(0,229,255,0.6);
-}
-
-/* RESULTADO */
-
-.resultado{
-display:none;
-margin-top:25px;
-padding:25px;
-border-radius:20px;
-background:#001d3d;
-}
-
-/* BLOCO NECESSIDADE */
-
-.necessidade{
-max-width:600px;
-margin:40px auto;
-padding:30px;
-background:#0f172a;
-border-radius:20px;
-text-align:center;
-box-shadow:0 15px 40px rgba(0,255,150,0.15);
-}
-
-.necessidade h3{
-color:#00ff99;
-margin-bottom:15px;
-}
-
-/* PLANOS */
-
-.plans{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-margin-top:40px;
-}
-
-.card{
-background:#111;
-padding:25px;
-border-radius:15px;
-width:280px;
-box-shadow:0 0 25px rgba(0,255,150,0.15);
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-.card h2{
-color:#00ff99;
-text-align:center;
-}
-
-.card p{
-font-size:14px;
-color:#ccc;
-}
-
-.price{
-text-align:center;
-margin:15px 0;
-font-size:22px;
-font-weight:bold;
-color:#00e5ff;
-}
-
-.plan-btn{
-display:block;
-text-align:center;
-padding:12px;
-background:#00ff99;
-color:black;
-font-weight:bold;
-border-radius:10px;
-text-decoration:none;
-transition:0.3s;
-}
-
-.plan-btn:hover{
-background:#00cc77;
-}
-
-.highlight{
-border:2px solid #00ff99;
-transform:scale(1.05);
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVO 360 | Método Estratégico de Evolução Corporal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<nav>
-  <a href="https://alespy80.github.io/Alessandro-ferreira-/">Início</a>
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">EVO <span>360</span></div>
+      <div class="nav-links">
+        <a href="https://alespy80.github.io/Alessandro-ferreira-/">Início</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#planos">Planos</a>
+        <a href="https://alespy80.github.io/Evo/" class="nav-link-dest">Método EVO</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="https://alespy80.github.io/Alessandro-ferreira-/">Início</a>
+      <a href="#diagnostico">Diagnóstico</a>
+      <a href="#planos">Planos</a>
+      <a href="https://alespy80.github.io/Evo/">Método EVO</a>
+    </div>
+  </nav>
 
-<a href="#diagnostico">Diagnóstico</a>
-<a href="#planos">Planos</a>
-  <a href="https://alespy80.github.io/Evo/">evo</a>
-</nav>
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <img src="file_00000000d96071f58e19c454adb7782f.png" class="hero-logo" alt="EVO 360" />
+      <div class="hero-badge"><span class="dot"></span> MÉTODO ESTRATÉGICO</div>
+      <h1 class="hero-titulo">EVO <span>360</span></h1>
+      <p class="hero-sub">Evolução corporal baseada em ativação neuromuscular,<br>controle de execução e progressão estratégica.</p>
+      <div class="hero-btns">
+        <a href="#diagnostico" class="btn-hero-prim">Fazer Diagnóstico Gratuito</a>
+        <a href="#planos" class="btn-hero-sec">Ver Planos</a>
+      </div>
+    </div>
+  </header>
 
-<header id="inicio">
+  <!-- PILARES -->
+  <section class="pilares-section">
+    <div class="container">
+      <div class="sec-label">Os 4 Pilares</div>
+      <h2 class="sec-titulo">A base do Método EVO 360</h2>
+      <div class="pilares-grid">
+        <div class="pilar-card">
+          <div class="pilar-icone">⚡</div>
+          <h3>Ativação Neural</h3>
+          <p>Maior recrutamento de fibras musculares através da ativação do sistema nervoso central.</p>
+        </div>
+        <div class="pilar-card">
+          <div class="pilar-icone">🔩</div>
+          <h3>Tensão Mecânica</h3>
+          <p>Execução controlada e contração máxima para estimular hipertrofia muscular real.</p>
+        </div>
+        <div class="pilar-card">
+          <div class="pilar-icone">🎯</div>
+          <h3>Intensidade Estratégica</h3>
+          <p>Uso de drop set, rest-pause e contrações isométricas no momento certo.</p>
+        </div>
+        <div class="pilar-card">
+          <div class="pilar-icone">📈</div>
+          <h3>Eficiência do Treino</h3>
+          <p>Treinos mais inteligentes com foco em qualidade e evolução constante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<img src="file_00000000d96071f58e19c454adb7782f.png" class="logo">
+  <!-- DIAGNÓSTICO -->
+  <section class="diag-section" id="diagnostico">
+    <div class="container">
+      <div class="sec-label">Gratuito</div>
+      <h2 class="sec-titulo">Diagnóstico Corporal EVO 360</h2>
+      <p class="sec-sub">Preencha os dados abaixo e descubra seu perfil de evolução.</p>
 
-<h1>EVO 360</h1>
-<p>Método Estratégico de Evolução Corporal</p>
+      <div class="diag-card" id="diag-form">
+        <div class="form-grid">
+          <div class="campo">
+            <label>Peso (kg)</label>
+            <input type="number" id="peso" placeholder="Ex: 75" min="1" step="0.1" />
+          </div>
+          <div class="campo">
+            <label>Altura (cm)</label>
+            <input type="number" id="altura" placeholder="Ex: 175" min="1" />
+          </div>
+          <div class="campo campo-full">
+            <label>Objetivo Principal</label>
+            <select id="objetivo">
+              <option value="">Selecione seu objetivo</option>
+              <option value="gordura">Redução de gordura</option>
+              <option value="hipertrofia">Hipertrofia muscular</option>
+              <option value="recomp">Recomposição corporal</option>
+              <option value="performance">Performance esportiva</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn-diag" id="btn-diag" onclick="calcular()">
+          Gerar Diagnóstico EVO 360
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
 
-</header>
+      <!-- RESULTADO -->
+      <div class="diag-resultado oculto" id="resultado">
+        <div class="res-topo">
+          <div class="res-imc-wrap">
+            <div class="res-imc-num" id="res-imc">—</div>
+            <div class="res-imc-label">IMC</div>
+          </div>
+          <div class="res-class-wrap">
+            <div class="res-class" id="res-class">—</div>
+            <div class="res-obj" id="res-obj"></div>
+          </div>
+        </div>
+        <div class="res-barra-wrap">
+          <div class="res-barra-fill" id="res-barra"></div>
+        </div>
+        <div class="res-marcadores">
+          <span>Abaixo<br>18.5</span>
+          <span>Normal<br>24.9</span>
+          <span>Sobrepeso<br>29.9</span>
+          <span>Obesidade<br>30+</span>
+        </div>
+        <div class="res-analise" id="res-analise"></div>
+        <div class="res-cta">
+          <p>Diagnóstico é só o começo. O que gera transformação é <strong>estratégia, ajuste técnico e acompanhamento direcionado</strong>.</p>
+          <a href="#planos" class="btn-res-planos">Ver planos personalizados →</a>
+          <button class="btn-refazer" onclick="refazer()">← Refazer diagnóstico</button>
+        </div>
+      </div>
 
-<section id="diagnostico">
+      <div class="diag-aviso">
+        <span>Você vai evoluir sozinho… ou com método?</span>
+      </div>
+    </div>
+  </section>
 
-<h2 style="text-align:center;color:#00e5ff;">Diagnóstico Corporal</h2>
+  <!-- PLANOS -->
+  <section class="planos-section" id="planos">
+    <div class="container">
+      <div class="sec-label">Investimento</div>
+      <h2 class="sec-titulo">Planos Personalizados</h2>
+      <p class="sec-sub">Escolha o formato que se encaixa na sua rotina. O método é o mesmo.</p>
 
-<div class="box">
+      <div class="planos-grid">
 
-<input type="number" id="peso" placeholder="Peso (kg)">
-<input type="number" id="altura" placeholder="Altura (cm)">
+        <div class="plano-card">
+          <div class="plano-header">
+            <div class="plano-titulo">Presencial</div>
+            <div class="plano-freq">2x por semana</div>
+          </div>
+          <ul class="plano-lista">
+            <li>Dois treinos presenciais por semana</li>
+            <li>Planejamento individualizado</li>
+            <li>Correção de execução</li>
+            <li>Ajustes estratégicos</li>
+          </ul>
+          <div class="plano-preco">R$ 350<span>/mês</span></div>
+          <a class="btn-plano" href="https://wa.me/5521979259432?text=Olá Alessandro, quero saber mais sobre o plano 2x por semana.">
+            Quero esse plano
+          </a>
+        </div>
 
-<select id="objetivo">
-<option value="">Objetivo principal</option>
-<option>Redução de gordura</option>
-<option>Hipertrofia muscular</option>
-<option>Recomposição corporal</option>
-<option>Performance esportiva</option>
-</select>
+        <div class="plano-card">
+          <div class="plano-header">
+            <div class="plano-titulo">Presencial</div>
+            <div class="plano-freq">3x por semana</div>
+          </div>
+          <ul class="plano-lista">
+            <li>Melhor divisão muscular</li>
+            <li>Progressão de carga estratégica</li>
+            <li>Evolução técnica constante</li>
+            <li>Acompanhamento mais próximo</li>
+          </ul>
+          <div class="plano-preco">R$ 480<span>/mês</span></div>
+          <a class="btn-plano" href="https://wa.me/5521979259432?text=Olá Alessandro, quero saber mais sobre o plano 3x por semana.">
+            Quero esse plano
+          </a>
+        </div>
 
-<button onclick="calcular()">Gerar Diagnóstico</button>
+        <div class="plano-card plano-destaque">
+          <div class="plano-badge">🔥 Mais popular</div>
+          <div class="plano-header">
+            <div class="plano-titulo">Presencial</div>
+            <div class="plano-freq">5x por semana</div>
+          </div>
+          <ul class="plano-lista">
+            <li>Estratégia completa semanal</li>
+            <li>Acompanhamento constante</li>
+            <li>Foco total em desempenho</li>
+            <li>Resultados acelerados</li>
+          </ul>
+          <div class="plano-preco">R$ 600<span>/mês</span></div>
+          <a class="btn-plano btn-plano-dest" href="https://wa.me/5521979259432?text=Olá Alessandro, quero transformar meu corpo com o plano 5x por semana.">
+            Quero transformar
+          </a>
+        </div>
 
-<div id="resultado" class="resultado"></div>
+        <div class="plano-card">
+          <div class="plano-header">
+            <div class="plano-titulo">Online</div>
+            <div class="plano-freq">💻 Consultoria</div>
+          </div>
+          <ul class="plano-lista">
+            <li>Avaliação inicial completa</li>
+            <li>Treino personalizado</li>
+            <li>Orientação alimentar estratégica</li>
+            <li>Suporte direto</li>
+          </ul>
+          <div class="plano-preco">R$ 180<span>/mês</span></div>
+          <a class="btn-plano" href="https://wa.me/5521979259432?text=Olá Alessandro, quero começar a consultoria online.">
+            Começar online
+          </a>
+        </div>
 
-</div>
+      </div>
+    </div>
+  </section>
 
-<div class="necessidade">
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">EVO <span>360</span></div>
+      <p>Método Estratégico de Evolução Corporal</p>
+      <div class="footer-links">
+        <a href="https://alespy80.github.io/Alessandro-ferreira-/">Site principal</a>
+        <a href="https://alespy80.github.io/Evo/">Método EVO</a>
+        <a href="https://wa.me/5521979259432">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
 
-<h3>Diagnóstico é só o começo.</h3>
-
-<p>
-Saber seu IMC e objetivo é o primeiro passo.
-O que realmente gera transformação é estratégia, ajuste técnico e acompanhamento direcionado.
-</p>
-
-<p style="margin-top:15px;color:#00e5ff;font-weight:bold;">
-Você vai evoluir sozinho… ou com método?
-</p>
-
-</div>
-
-</section>
-
-<section id="planos">
-
-<h2 style="text-align:center;color:#00ff99;">Planos Personalizados</h2>
-
-<div class="plans">
-
-<div class="card">
-<h2>Presencial 2x por semana</h2>
-
-<p>✔ Dois treinos presenciais por semana</p>
-<p>✔ Planejamento individualizado</p>
-<p>✔ Correção de execução</p>
-<p>✔ Ajustes estratégicos</p>
-
-<div class="price">R$ 350 / mês</div>
-
-<a class="plan-btn"
-href="https://wa.me/5521979259432?text=Olá Alessandro, quero saber mais sobre o plano 2x por semana.">
-Quero esse plano
-</a>
-
-</div>
-
-<div class="card">
-<h2>Presencial 3x por semana</h2>
-
-<p>✔ Melhor divisão muscular</p>
-<p>✔ Progressão de carga estratégica</p>
-<p>✔ Evolução técnica constante</p>
-<p>✔ Acompanhamento mais próximo</p>
-
-<div class="price">R$ 480 / mês</div>
-
-<a class="plan-btn"
-href="https://wa.me/5521979259432?text=Olá Alessandro, quero saber mais sobre o plano 3x por semana.">
-Quero esse plano
-</a>
-
-</div>
-
-<div class="card highlight">
-
-<h2>Presencial 5x por semana 🔥</h2>
-
-<p>✔ Estratégia completa semanal</p>
-<p>✔ Acompanhamento constante</p>
-<p>✔ Foco total em desempenho</p>
-<p>✔ Resultados acelerados</p>
-
-<div class="price">R$ 600 / mês</div>
-
-<a class="plan-btn"
-href="https://wa.me/5521979259432?text=Olá Alessandro, quero transformar meu corpo com o plano 5x por semana.">
-Quero transformar
-</a>
-
-</div>
-
-<div class="card">
-
-<h2>Consultoria Online 💻</h2>
-
-<p>✔ Avaliação inicial completa</p>
-<p>✔ Treino personalizado</p>
-<p>✔ Orientação alimentar estratégica</p>
-<p>✔ Suporte direto</p>
-
-<div class="price">R$ 180 / mês</div>
-
-<a class="plan-btn"
-href="https://wa.me/5521979259432?text=Olá Alessandro, quero começar a consultoria online.">
-Começar online
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<script>
-
-function calcular(){
-
-let peso=parseFloat(document.getElementById("peso").value);
-let altura=parseFloat(document.getElementById("altura").value)/100;
-let objetivo=document.getElementById("objetivo").value;
-
-if(!peso || !altura || !objetivo){
-alert("Preencha todos os dados.");
-return;
-}
-
-let imc=peso/(altura*altura);
-let perfil="";
-
-if(imc<18.5) perfil="Abaixo do peso – Estratégia de estruturação.";
-else if(imc<24.9) perfil="Peso adequado – Potencial de otimização.";
-else if(imc<29.9) perfil="Sobrepeso – Ajustes estratégicos necessários.";
-else perfil="Obesidade – Alta necessidade de estruturação.";
-
-document.getElementById("resultado").style.display="block";
-
-document.getElementById("resultado").innerHTML=
-
-"<strong>IMC:</strong> "+imc.toFixed(2)+"<br><br>"+
-
-perfil+"<br><br>"+
-
-"Com foco em <strong>"+objetivo+"</strong>, o Método EVO 360 pode acelerar sua evolução.";
-
-}
-
-</script>
-
+  <script src="app.js"></script>
 </body>
 </html>
